@@ -1,0 +1,5 @@
+name,shape,mass,volume
+'apple','sphere',350,120
+'lemon','sphere',300,100
+'apple','sphere',500,250
+'mango','square',150,120
