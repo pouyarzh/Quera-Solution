@@ -12,10 +12,19 @@ class Chain:
             self.result += value
         elif self.mode == 'string' and isinstance(value, str):
             self.result += value + ' '
+        else:
+            raise Exception('invalid operation')
         return self
 
     def __repr__(self):
         return str(self.result).rstrip()
+
+    def __int__(self):
+        if self.result.isnumeric():
+            return f'{self.result}'
+        else:
+            return f'{self.result}i'
+
 
     def __eq__(self, other):
         if isinstance(other, str) and self.mode == 'string':
@@ -33,4 +42,9 @@ print(Chain(1)(2)(3)(4) == 10)
 
 print(Chain('a')('b')('c')('d'))
 print(Chain('a')('b')('c')('d') == 'abcd')
+
+print(Chain('abc')('defg') == 'abc defg')
+
+# Chain('Ali')(5)
+# Chain(9)([1, 2])
 

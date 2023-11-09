@@ -1,7 +1,7 @@
 import unittest
 import sys
 sys.path.append('../Initial_project')
-from MainPythonProject.QueraProblemSet.QueraStartDate.Zanjire.chain import Chain
+from  Python.Zanjire.chain import Chain
 
 class TestFind(unittest.TestCase):
 
